@@ -1,0 +1,51 @@
+{
+  "name": "arielespinoza07/tenancy-core",
+  "description": "Framework-agnostic tenancy core for PHP applications, providing tenant resolution, tenant context, access guards, and authorization contracts.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["tenancy", "multi-tenant", "saas", "php", "framework-agnostic"],
+  "authors": [
+    {
+      "name": "Ariel Espinoza",
+      "email": "arielespinoza46@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.5"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.29",
+    "phpstan/phpstan": "^2.2",
+    "pestphp/pest": "^4.7",
+    "laravel/pao": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tenancy\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tenancy\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "lint": "pint --test",
+    "lint:fix": "pint",
+    "analyse": "phpstan analyse",
+    "test": "pest",
+    "test:coverage": "pest --coverage",
+    "check": [
+      "@lint",
+      "@analyse",
+      "@test"
+    ]
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
