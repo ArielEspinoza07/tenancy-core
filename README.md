@@ -1,5 +1,11 @@
 # Tenancy Core
 
+[![CI](https://github.com/arielespinoza07/tenancy-core/actions/workflows/ci.yml/badge.svg)](https://github.com/arielespinoza07/tenancy-core/actions/workflows/ci.yml)
+[![Latest Version](https://img.shields.io/packagist/v/arielespinoza07/tenancy-core.svg)](https://packagist.org/packages/arielespinoza07/tenancy-core)
+[![Total Downloads](https://img.shields.io/packagist/dt/arielespinoza07/tenancy-core.svg)](https://packagist.org/packages/arielespinoza07/tenancy-core)
+[![PHP Version](https://img.shields.io/packagist/php-v/arielespinoza07/tenancy-core.svg)](https://packagist.org/packages/arielespinoza07/tenancy-core)
+[![License](https://img.shields.io/packagist/l/arielespinoza07/tenancy-core.svg)](LICENSE)
+
 Framework-agnostic tenancy core for PHP applications, providing tenant resolution, tenant context, access guards, and authorization contracts.
 
 ---
