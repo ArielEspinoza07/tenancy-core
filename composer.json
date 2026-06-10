@@ -16,8 +16,7 @@
   "require-dev": {
     "laravel/pint": "^1.29",
     "phpstan/phpstan": "^2.2",
-    "pestphp/pest": "^4.7",
-    "laravel/pao": "^1.1"
+    "pestphp/pest": "^4.7"
   },
   "autoload": {
     "psr-4": {

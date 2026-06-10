@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-06-09
+
+### Removed
+- `laravel/pao` dev dependency — agent-optimised test output wrapper not relevant to library consumers
+
 ## [1.0.0] - 2026-06-09
 
 ### Added
@@ -24,5 +29,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PHPStan level 8 with zero errors
 - GitHub Actions CI workflow
 
-[Unreleased]: https://github.com/arielespinoza07/tenancy-core/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/arielespinoza07/tenancy-core/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/arielespinoza07/tenancy-core/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/arielespinoza07/tenancy-core/releases/tag/v1.0.0
