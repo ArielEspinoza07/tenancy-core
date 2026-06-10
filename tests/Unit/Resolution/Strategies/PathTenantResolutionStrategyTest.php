@@ -9,6 +9,7 @@ use Tenancy\Exceptions\TenantSuspendedException;
 use Tenancy\Resolution\Strategies\PathTenantResolutionStrategy;
 use Tenancy\Resolution\TenantResolutionInput;
 use Tenancy\Tests\Fixtures\FakeTenantLookup;
+use Tenancy\Tests\Fixtures\FakeTenantResolutionInput;
 
 beforeEach(function () {
     $this->lookup = new FakeTenantLookup();
@@ -85,7 +86,7 @@ it('supports() with prefix returns false when nothing follows the prefix', funct
 });
 
 it('supports() returns false when path trims to empty after lowercasing', function () {
-    $input = TenantResolutionInput::fromArray(['path' => '   ']);
+    $input = new FakeTenantResolutionInput(path: '   ');
 
     expect($this->strategy->supports($input))->toBeFalse();
 });
