@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-06-12
+
+### Added
+- `CurrentTenantInterface::scoped()` — runs a callback under a specific tenant context and restores the previous state afterward, even on exceptions
+- `CurrentTenantInterface::withoutContext()` — clears the tenant context for the duration of a callback and restores it on exit
+
 ## [1.0.1] - 2026-06-09
 
 ### Removed
@@ -29,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PHPStan level 8 with zero errors
 - GitHub Actions CI workflow
 
-[Unreleased]: https://github.com/arielespinoza07/tenancy-core/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/arielespinoza07/tenancy-core/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/arielespinoza07/tenancy-core/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/arielespinoza07/tenancy-core/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/arielespinoza07/tenancy-core/releases/tag/v1.0.0

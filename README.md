@@ -287,6 +287,33 @@ public function terminate(): void
 
 If your framework supports request-scoped bindings, binding `CurrentTenant` per-request is the cleanest solution and makes the manual `clear()` unnecessary.
 
+#### Running code under a specific tenant
+
+Use `scoped()` when you need to temporarily switch context — background jobs, data migrations, or console commands that iterate over tenants:
+
+```php
+foreach ($tenants as $tenantRecord) {
+    $context = new TenantContext(record: $tenantRecord, source: TenantResolutionSource::Console);
+
+    $currentTenant->scoped($context, function () use ($currentTenant) {
+        // runs under $tenantRecord; previous context is restored on exit, even on exceptions
+        $this->processReports($currentTenant->get());
+    });
+}
+```
+
+#### Running code without any tenant context
+
+Use `withoutContext()` to temporarily drop the tenant for global or system-level operations:
+
+```php
+$currentTenant->withoutContext(function () {
+    // no tenant is set here
+    $this->syncGlobalConfig();
+});
+// previous context is restored on exit
+```
+
 ---
 
 ## Checking access and permissions
